@@ -1,4 +1,5 @@
-div.worldmap {
-    content:url(assets/images/map-world.png);
- }​
- 
+img {
+    widows: 940px;
+    height: 400px;
+    
+}
