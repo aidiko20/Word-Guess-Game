@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Guess the country</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet">
 </head>
 <script src=assets/javascript/game.js></script>
 <body>
+
+       
+       
+    <div>
+        <h3 id="directions-text">Press any key to start!</h3>
+        <input type="text" onkeyup="myFunction()">
+        <p id="userGuess"></p>
+        <p id="country"></p>
+        <p id="wins-text"></p>
+        <p id="losses-text"></p>
+    </div>
     
+    <div class="worldmap"></div>
 </body>
 </html>

@@ -1,15 +1,18 @@
-
-alert("Press any key to get starter");
-
-alert("You have 5 guess.Guess 1-5");
+//Array 
 var countryName=["Spain","Malaysia", "Russia", "Zambia", "Italy","Argentina", "New Zealand","South Korea","Qatar","Switzerland"]
-var countryName = "Spain";
-var guess=prompt ("Which country is it?");
+var countryName = "_____";
+var wins = 0;
+var looses = 0;
 
-for (i=0; i<5; i++);
 
-if (countryName==guess){
-    alert("You guessed correctly");
-} else {
-    guess=prompt("Please Try Again");
-}
+function myFunction() {
+    prompt("You pressed a key to start");
+  }
+//creating variables refrencing to HTML
+var directionsText = document.getElementById("directions-text");
+var userGuess = document.getElementById("userGuess");
+var 
+
+
+
+
