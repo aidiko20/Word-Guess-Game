@@ -71,3 +71,18 @@ function setTotalGuess(){
     updateLoss();
     }
     }
+    function updateGuesses(letter){
+        if(letterGuessed.indexOf(letter) === -1 && lettersOfTHEWord.indexOf(letter)=== -1){
+        letterGuessed.push(letter);
+        guessLeft--;
+        document.querySelector("#guessLeft").innerHTML = guessLeft;
+        }
+    }
+    function updateCorrectMatch(letter){
+        for(var i=0; i<lettersOfTHEWord.length; i++){
+        if(letter === lettersOfTHEWord[i] && matchedLetters.indexOf(letter) === -1){
+        matchedLetters.push(letter);
+        }
+        }
+        }
+    
