@@ -47,4 +47,27 @@ function generateUNDERSCORES(){
     }
     document.querySelector("#currentWord").innerHTML = wordView;
 }
-
+function setTotalGuess(){
+    NoOfGuesses = lettersOfTHEWord.length + 5;
+    guessLeft = NoOfGuesses;
+    document.querySelector("#guessLeft").innerHTML = guessLeft;
+    
+    }
+    startGame();
+    
+    document.onkeyup = function(event){
+    letterGuessed = String.fromCharCode(event.which).toUpperCase();
+    updatePage(letterGuessed);
+    }
+    function updatePage(letter){
+    if(guessLeft == 0){
+    restartGame();
+    }
+    else{
+    updateGuesses(letter);
+    updateCorrectMatch(letter);
+    generateUNDERSCORES();
+    updateWins();
+    updateLoss();
+    }
+    }
