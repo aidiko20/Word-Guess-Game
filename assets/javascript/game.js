@@ -8,6 +8,7 @@ var matchedLetters = [];
 var guessLeft = 0;
 var lettersOfTHEWord = [];
 var letterGuessed = null;
+var typedLetters = [];
 
 
 document.addEventListener('keydown', function (e) {
@@ -18,13 +19,11 @@ function startGame() {
     var countries = [
         "SPAIN", "MALAYSIA", "RUSSIA", "ZAMBIA", "ITALY", "SWITZERLAND", "SOUTH KOREA", "NEW ZEALAND", "QATAR", "ARGENTINA"
     ]
-    var countries = countries[Math.floor(Math.random() * countries.length)];
+    var country = countries[Math.floor(Math.random() * countries.length)];
 
-    console.log("country: " + countries);
 
-    lettersOfTHEWord = countries.split("");
+    lettersOfTHEWord = country.split("");
 
-    console.log("letters: " + lettersOfTHEWord);
     generateUNDERSCORES();
     setTotalGuess();
 }
@@ -66,11 +65,11 @@ function updatePage(letter) {
     }
 }
 function updateGuesses(letter) {
-    if (letterGuessed.indexOf(letter) === -1 && lettersOfTHEWord.indexOf(letter) === -1) {
-        letterGuessed.push(letter);
-        guessLeft--;
-        document.querySelector("#guessLeft").innerHTML = guessLeft;
-    }
+    typedLetters += letter + " ";
+    guessLeft--;
+    document.querySelector("#guessLeft").innerHTML = guessLeft;
+    document.querySelector("#typedLetters").innerHTML = typedLetters;
+    
 }
 function updateCorrectMatch(letter) {
     for (var i = 0; i < lettersOfTHEWord.length; i++) {
@@ -106,11 +105,10 @@ function updateLoss() {
         document.querySelector("#Losses").innerHTML = loss;
     }
 }
- function restartGame(){
-     var startGame;
-     if (matchedLetters.length === wins){
-         prompt("You won the game!")
-     }
- }
+function restartGame() {
+    var startGame;
+    if (matchedLetters.length === wins) {
+        prompt("You won the game!")
+    }
+}
 
- 
