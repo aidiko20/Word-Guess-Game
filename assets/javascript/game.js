@@ -1,17 +1,6 @@
-{
-    directionsText = document.getElementById("directions-text");
-    document.onkeyup = function (event) {
-        var playerGuess = event.key;
-        console.log(String.fromCharCode(event.which));
-    }
-}
+
 var question = ["Guess the country by flag"];
 var answerArray = [];
-// for (var i = 0; i < countries.length; i++) {
-//  answerArray[i] = "_";
-// }
-// var remainingLetters = countries.length;
-
 var Wins = 0;
 var Looses = 0;
 var NoOfGuesses = 5;
@@ -19,6 +8,11 @@ var matchedLetters = [];
 var guessLeft = 0;
 var lettersOfTHEWord = [];
 var letterGuessed = null;
+
+
+document.addEventListener('keydown', function (e) {
+    document.getElementById("directions-text").style.display = "none";
+});
 
 function startGame() {
     var countries = [
