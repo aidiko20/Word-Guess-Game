@@ -85,6 +85,7 @@ function updateCorrectMatch(letter) {
         }
     }
 }
+// add letter already guessed function
 function updateWins() {
     var win;
     if (matchedLetters.length === 0) {
@@ -117,3 +118,5 @@ function updateLoss() {
          prompt("You won the game!")
      }
  }
+
+ 
