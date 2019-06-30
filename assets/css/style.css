@@ -1,3 +1,5 @@
-.container{
-    border-color: black;
+#gameScreen{
+    font-size: 18px;
+    color:red;
+    font-style:bold;
 }

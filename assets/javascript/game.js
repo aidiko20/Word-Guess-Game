@@ -54,7 +54,7 @@ document.onkeyup = function (event) {
 }
 function updatePage(letter) {
     if (guessLeft == 0) {
-        restartGame();
+        location.reload();
     }
     else {
         updateGuesses(letter);
@@ -94,21 +94,16 @@ function updateWins() {
 }
 function updateLoss() {
     var loss;
-    if (matchedLetters.length === -1) {
-        loss = false;
+    if (matchedLetters.length === 0) {
+        loss = true;
     }
     else {
-        loss = true;
+        loss = false;
     }
     if (loss) {
         loss++;
         document.querySelector("#Losses").innerHTML = loss;
     }
 }
-function restartGame() {
-    var startGame;
-    if (matchedLetters.length === wins) {
-        prompt("You won the game!")
-    }
-}
+
 
